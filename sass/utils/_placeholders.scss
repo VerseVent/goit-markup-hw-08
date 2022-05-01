@@ -1,0 +1,18 @@
+%btn{
+    color: $secondary-text-color;
+    cursor: pointer;
+    font-family: "Roboto";
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.85;
+    letter-spacing: 0.06em;
+    background: $aditional-color;
+    border: 0px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

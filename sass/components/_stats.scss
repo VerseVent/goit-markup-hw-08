@@ -1,0 +1,73 @@
+.stats{
+    @include flex(space-between, unset, row);
+    @media screen and (max-width:$mobile) {
+        @include flex(center, center, column);
+        width: 450px;
+    }
+    @media screen and (min-width:481px) and (max-width:$tablet) {
+        @include flex(space-between, unset, row);
+        flex-wrap: wrap;
+        .stats__item{
+            // width: calc((100%));
+        }
+    }
+    .stats__item {
+        width: 270px;
+        @media screen and (max-width:$mobile) {
+            width: 100%;
+            text-align: center;
+            &:last-of-type .stats__description{
+                padding-bottom: 0;
+            }
+            }
+        @media screen and (min-width:481px) and (max-width:$tablet) {
+            width: 354px;
+            &:nth-of-type(-n + 2){
+                padding-bottom: 30px;
+            }
+        }
+        .stats__icon-container {
+            @media screen and (max-width:$mobile) {
+                width: 100%;
+            }
+            @media screen and (min-width:481px) and (max-width:$tablet) {
+                width: 354px;
+                border-radius: 4px;
+            }
+            width: 270px;
+            height: 120px;
+            margin-bottom: 30px;
+            @include flex(center, center);
+            background-color: rgba(245, 244, 250, 1);
+        }
+
+        .stats__icon {
+            width: 70px;
+            height: 70px;
+        }
+
+        .stats__title {
+            color: $main-text-color;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+        }
+        
+        .stats__description {
+            @media screen and (max-width:$mobile) {
+                text-align: left;
+                padding-bottom: 30px;
+            }
+            color: $aditional-text-color;
+            padding-top: 10px;
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 0.03em;
+        
+        }
+    }
+    
+}
+

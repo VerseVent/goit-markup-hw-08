@@ -1,0 +1,160 @@
+.portfolio__filter{
+    @include flex(center, unset, row);
+    @media screen and (max-width: $mobile) {
+        @include flex(left,unset,row);
+        flex-wrap:wrap;
+    }
+}
+.portfolio__filter-item{
+    @media screen and (max-width: $mobile) {
+        padding-bottom: 15px;
+        &:nth-last-of-type(-n + 2){
+            padding-bottom: 40px;
+        }
+    }
+    padding-bottom: 50px;
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    .portfolio__filter-button{
+        cursor: pointer;
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.65;
+        letter-spacing: 0.03em;
+        padding:6px 22px;
+        background: $filter-button-background-color;
+        border: 0px;
+        border-radius: 4px;
+        transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover{
+            color: $filter-button-hover-color;
+            background: $aditional-color;
+            box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.12),
+            0 1px 2px 0 rgba(0, 0, 0, 0.08)
+        }
+    }
+}
+.portfolio__works {
+    @include flex(space-between);
+    flex-wrap: wrap;
+    @media screen and (max-width: $mobile) {
+        @include flex(center, center, column);
+        flex-wrap: nowrap;
+    }
+    @media screen and (min-width:481px) and (max-width:$tablet) {
+        @include flex(space-between, flex-start, row);
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+}
+.portfolio__item {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: $mobile) {
+        width: 450px;
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width:481px) and (max-width:$tablet) {
+        width: 354px;
+        
+        // flex-basis: calc((100% - 4 * 15px) / 2);
+        // flex-basis: auto;
+        &:not(:last-child) {
+            flex-grow: 1;
+            margin-bottom: 30px;
+        }
+    }
+    .portfolio__work-link {
+        color: $main-text-color;
+        text-decoration: $text-decoration-type;
+    }
+
+    &:hover .portfolio__overlay-content {
+        transform: translateY(0%);
+    }
+
+    &:nth-child(-n + 6) {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+            0 4px 4px 0 rgba(0, 0, 0, 0.06),
+            0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+}
+.portfolio__figure {
+    overflow: hidden;
+    .portfolio__overlay-container {
+        position: relative;
+        overflow: hidden;
+
+        .portfolio__work-img {
+        @media screen and (min-width:481px) and (max-width:$tablet) {
+            // margin:0;
+        }
+            // @media screen and (max-width: $mobile) {
+                
+            // }
+            // display: block;
+            // // width: 370px;
+            // margin: 0;
+            // padding: 0;
+        }
+    }
+    .portfolio__overlay-content {
+        position: absolute;
+        top: 0;
+        padding: 63px 24px;
+        @media screen and (max-width: $mobile) {
+            padding: 77px 24px;
+        }
+        @media screen and (min-width:481px) and (max-width:$tablet) {
+            padding: 49px 24px 77px 24px;
+        }
+        text-align: left;
+        width: 100%;
+        // height: 294px;
+        
+        color: $backdrop-text-color;
+        font-family: 'Roboto';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        background-color: $portfolio-overlay-background-color;
+    
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+.portfolio__work-caption {
+    padding-top: 20px;
+    border-right: 1px solid $item-border-color;
+    border-bottom: 1px solid $item-border-color;
+    border-left: 1px solid $item-border-color;
+    .portfolio__work-title {
+        font-size: 18px;
+        padding: 0 24px 4px 24px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    } 
+    .portfolio__work-type {
+        color: $aditional-text-color;
+        padding: 0 24px 20px 24px;
+        font-size: 16px;
+        line-height: 1.85;
+        letter-spacing: 0.03em;
+        text-align: left;  
+    }
+}
