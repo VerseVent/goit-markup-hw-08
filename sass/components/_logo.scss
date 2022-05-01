@@ -5,9 +5,10 @@
     padding-bottom: 24px;
     @media screen and (max-width:$mobile) {
         padding-right: 0;
+        // padding-top: 60px;
         @include flex(center,center);
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         padding-top: 26px;
         padding-right: 88px;
         padding-bottom: 26px;
@@ -38,7 +39,7 @@
     }
 }
 .footer__logo--padding{
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         padding: 0;
         margin-bottom: 20px;
         @include flex(center);

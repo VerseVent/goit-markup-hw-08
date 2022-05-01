@@ -1,6 +1,10 @@
+html{
+    // height: 100%;
+}
 body {
     font-family: 'Roboto', sans-serif;
     color: $main-text-color;
+    // height: 100%;
     &.modal-open{
         overflow: hidden;
     }
@@ -10,19 +14,20 @@ body {
 }
 .container {
     width: 1200px;
+    // overflow-x: hidden;
     margin: 0 auto;
     padding: 0 15px;
     @media screen and (max-width:$mobile) {
         width: $mobile;
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
        width: $tablet;
 
     }
 }
 // .main-content{
 
-//     // width: 480px;
+//     width: 100%;
 // }
 .btn {
     @extend %btn;
@@ -53,7 +58,7 @@ body {
             padding-bottom: 0;
         }
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         padding: 60px 0;
         &:nth-of-type(2) {
             padding-bottom: 0;

@@ -4,24 +4,24 @@
 .header {
     @media screen and (max-width:$mobile) {
         position: relative;
-        width: $mobile;
+        width: $mobile; 
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
-        // width: $tablet;
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+        width: $tablet;
     }
     border-bottom: 1px solid #ECECEC;
     .header__container{
         @include flex(space-between, unset, row);
         @media screen and (max-width:$mobile) {
             display: block;
-            width: 450px;
+            margin: 0 auto;
+            width: auto;
             // @include flex(center,center,column);
         }
-        @media screen and (min-width:481px) and (max-width:$tablet) {
-            display: flex;
-            justify-content: unset;
-            width: 738px;
-            // @include flex(center,center,column);
+        @media screen and (min-width:$mobile) and (max-width:$tablet) {
+            @include flex(center,center,row);
+            // width: $tablet;
+            
         }
     }
     .header__menu-button{
@@ -105,7 +105,7 @@
            
             }
         }
-        @media screen and (min-width:481px) and (max-width:$tablet) {
+        @media screen and (min-width:$mobile) and (max-width:$tablet) {
             margin-right: 84px;
         }
     

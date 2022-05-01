@@ -19,16 +19,16 @@
         }
     @media screen and (max-width:$mobile) {
         // padding: 118px 60px;
-        width: $mobile;
+        max-width: 480px;
         background-size:cover;
         // @include flex(center,center,column);
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
-        width: $tablet;
-        height: 400px;
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+        width: 1200px;
+        height: 100%;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/hero-bg-tablet/img@2x-min.jpg');
-        background-size: $tablet 400px;
+        background-size: cover;
         padding: 118px 0;
     }
 }
@@ -41,13 +41,13 @@
         width: 450px;
         // @include flex(center,center,column);
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         width: 360px;
     }
 }
 
 .hero__title {
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         font-family: "Roboto";
         font-size: 26px;
         font-weight: 900;

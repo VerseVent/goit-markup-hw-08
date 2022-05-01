@@ -1,5 +1,5 @@
 .client__sign {
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         font-size: 28px;
         margin-bottom: 30px;
     }
@@ -17,14 +17,15 @@
     justify-content: center;
     @media screen and (max-width:$mobile) {
         @include flex(center,center,row);
-        // display: block;
+        margin: 0 auto;
         flex-wrap: wrap;
         width: 450px;
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         @include flex(space-between, center, row);
         // @include flex();
         // display: block;
+        margin: 0 auto;
         flex-wrap: wrap;
         width: 738px;
     }
@@ -36,7 +37,7 @@
 
 .client__container {
     padding: 16px 32px;
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         text-align: center;
     }
 }
@@ -60,7 +61,7 @@
             margin-bottom: 0;
         }
     }
-    @media screen and (min-width:481px) and (max-width:$tablet) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet){
         width: calc((100% - 4 * 15px) / 3);
         border-radius: 4px;
         &:nth-of-type(-n + 3) {
