@@ -45,7 +45,7 @@ body.is-open {
   pointer-events: none;
 }
 
-body.is-open .modal {
+body.is-open .header {
   pointer-events: all;
 }
 
