@@ -3,7 +3,7 @@
     @media screen and (max-width:$mobile) {
         @include flex(center, center, column);
         margin: 0 auto;
-        width: 450px;
+        max-width: 450px;
     }
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
         @include flex(space-between, unset, row);

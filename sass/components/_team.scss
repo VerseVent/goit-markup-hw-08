@@ -2,11 +2,11 @@
     background-color: $team-section-background-color;
     @media screen and (max-width:$mobile) {
         // padding: 118px 60px;
-        width: $mobile;
+        max-width: $mobile;
         // @include flex(center,center,column);
     }
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
-        width: $tablet;
+        max-width: $tablet;
     }
 }
 .team__title {
@@ -31,7 +31,7 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        width: 450px;
+        max-width: 450px;
     }
 
     .team__member {

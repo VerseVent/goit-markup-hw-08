@@ -3,11 +3,11 @@
 
 .header {
     @media screen and (max-width:$mobile) {
-        position: relative;
-        width: $mobile; 
+        // position: relative;
+        max-width: $mobile;
     }
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
-        width: $tablet;
+        max-width: $tablet;
     }
     border-bottom: 1px solid #ECECEC;
     .header__container{
@@ -50,6 +50,7 @@
 
     }
     .header__navigation {
+        
         @include flex();
         .header__mobile-menu{
             display: none;
