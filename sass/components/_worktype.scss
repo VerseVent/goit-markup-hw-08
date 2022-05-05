@@ -1,10 +1,4 @@
 .worktype__title {
-    @media screen and (max-width:767px){
-        display: none;
-    }
-    @media screen and (min-width:$mobile) and (max-width:$tablet) {
-        display: none;
-    }
     color: $main-text-color;
     margin-bottom: 50px;
     text-align: center;
@@ -12,16 +6,23 @@
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: 0.03em;
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+        display: none;
+    }
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
 
 }
 .worktype {
     @include flex(space-between, unset, row);
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
         display: none;
       
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
     }
     .worktype__item {
         position: relative;

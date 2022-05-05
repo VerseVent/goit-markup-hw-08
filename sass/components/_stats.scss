@@ -1,10 +1,5 @@
 .stats{
     @include flex(space-between, unset, row);
-    @media screen and (max-width:767px) {
-        @include flex(center, center, column);
-        margin: 0 auto;
-        max-width: 450px;
-    }
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
         @include flex(space-between, unset, row);
         flex-wrap: wrap;
@@ -12,15 +7,13 @@
             // width: calc((100%));
         }
     }
+    @media screen and (max-width:767px) {
+        @include flex(center, center, column);
+        margin: 0 auto;
+        max-width: 450px;
+    }
     .stats__item {
         width: 270px;
-        @media screen and (max-width:767px) {
-            width: 100%;
-            text-align: center;
-            &:last-of-type .stats__description{
-                padding-bottom: 0;
-            }
-            }
         @media screen and (min-width:$mobile) and (max-width:$tablet) {
             width: 354px;
             width: calc((100% - 2 * 15px) / 2);
@@ -28,19 +21,27 @@
                 padding-bottom: 30px;
             }
         }
-        .stats__icon-container {
-            @media screen and (max-width:767px) {
-                width: 100%;
+        @media screen and (max-width:767px) {
+            width: 100%;
+            text-align: center;
+        
+            &:last-of-type .stats__description {
+                padding-bottom: 0;
             }
+        }
+        .stats__icon-container {
+            @include flex(center, center);
+            width: 270px;
+            height: 120px;
+            margin-bottom: 30px;
+            background-color: rgba(245, 244, 250, 1);
             @media screen and (min-width:$mobile) and (max-width:$tablet) {
                 width: 100%;
                 border-radius: 4px;
             }
-            width: 270px;
-            height: 120px;
-            margin-bottom: 30px;
-            @include flex(center, center);
-            background-color: rgba(245, 244, 250, 1);
+            @media screen and (max-width:767px) {
+                width: 100%;
+            }
         }
 
         .stats__icon {
@@ -58,16 +59,15 @@
         }
         
         .stats__description {
-            @media screen and (max-width:767px) {
-                text-align: left;
-                padding-bottom: 30px;
-            }
             color: $aditional-text-color;
             padding-top: 10px;
             font-size: 14px;
             line-height: 1.7;
             letter-spacing: 0.03em;
-        
+            @media screen and (max-width:767px) {
+                text-align: left;
+                padding-bottom: 30px;
+            }
         }
     }
     

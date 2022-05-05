@@ -3,11 +3,12 @@
     padding-top: 24px;
     padding-right: 93px;
     padding-bottom: 24px;
-    @media screen and (max-width:767px) {
-        padding-right: 0;
-        // padding-top: 60px;
-        @include flex(center,center);
-    }
+
+    font-family: 'Raleway';
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.15;
+
     @media screen and (min-width:$mobile) and (max-width:$tablet) {
         padding-top: 26px;
         padding-right: 88px;
@@ -20,11 +21,12 @@
         letter-spacing: 0.03em;
         text-align: left;
     }
+    @media screen and (max-width:767px) {
+        padding-right: 0;
+        // padding-top: 60px;
+        @include flex(center, center);
+    }
 
-    font-family: 'Raleway';
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.15;
     
     .logo__link {
         color: $main-text-color;

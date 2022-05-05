@@ -14,15 +14,6 @@
 
 .modal {
     position: absolute;
-    // display: block;
-    @media screen and (max-width: 767px) {
-        width: 90%;
-        height: auto;
-    }
-    @media screen and (min-width:$mobile) and (max-width:$tablet) {
-        width: 450px;
-        height: 609px;
-    }
     max-width: 528px;
     max-height: 581px;
     border-radius: 4px;
@@ -30,24 +21,33 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 90%;
+        height: auto;
+    }
     .modal__content {
         @include flex(center, center, column);
         padding: 40px;
 
     }
     .modal__sign {
-        @media screen and (max-width: 767px) {
-            text-align: center;
-        }
-        @media screen and (min-width:$mobile) and (max-width:$tablet) {
-            text-align: center;
-        }
         font-family: "Roboto";
         font-size: 20px;
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: 0.03em;
         margin-bottom: 12px;
+        @media screen and (min-width:$mobile) and (max-width:$tablet) {
+            text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+        
     }
 }
 

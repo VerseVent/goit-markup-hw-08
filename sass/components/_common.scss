@@ -29,12 +29,12 @@ body {
     // overflow-x: hidden;
     margin: 0 auto;
     padding: 0 15px;
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+        max-width: $tablet;
+    
+    }
     @media screen and (max-width:767px) {
         max-width: $mobile;
-    }
-    @media screen and (min-width:$mobile) and (max-width:$tablet) {
-       max-width: $tablet;
-
     }
 }
 // .main-content{
@@ -64,13 +64,14 @@ body {
 }
 .section {
     padding: 94px 0;
-    @media screen and (max-width:767px) {
+    @media screen and (min-width:$mobile) and (max-width:$tablet) {
         padding: 60px 0;
+    
         &:nth-of-type(2) {
             padding-bottom: 0;
         }
     }
-    @media screen and (min-width:$mobile) and (max-width:$tablet) {
+    @media screen and (max-width:767px) {
         padding: 60px 0;
         &:nth-of-type(2) {
             padding-bottom: 0;
