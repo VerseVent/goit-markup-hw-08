@@ -1,6 +1,6 @@
 .footer {
     @include flex();
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         max-width: $mobile;
         text-align: center;
         // width: 100%;
@@ -43,7 +43,7 @@
 }
 .footer--flex{
     @include flex();
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         // display: block;
         @include flex(center,center,column);
     }
@@ -54,14 +54,14 @@
 }
 .flex-container {
     @include flex(center,center);
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         // display: block;
         @include flex(center,center,column);
     }
 }
 
 .footer__container {
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         @include flex(center,center,column);
         width: 100%;
     }
@@ -75,7 +75,7 @@
 .footer__email-form {
     padding: 72px 0 94px 0;
     margin-left: 94px;
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         @include flex(center, center, column);
         margin:0;
         padding:30px 0 60px;
@@ -102,7 +102,7 @@
     }
     
     .footer__email-form-input {
-        @media screen and (max-width:$mobile){
+        @media screen and (max-width:767px){
             margin-bottom: 20px;
             width: 100%;
         }
@@ -120,7 +120,7 @@
     .footer__email-btn{
         @include flex(center, center);
         margin-left: 12px;
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             margin-left: 0;
         }
     }
@@ -144,7 +144,7 @@
 .footer__email-form-input {
     color: $subscribe-text-color;
     &::placeholder {
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             padding: 0 0 0 16px;
         }
         padding: 15px 0 15px 16px;
@@ -163,7 +163,7 @@
     margin-left: 70px;
     padding-top: 72px;
     padding-bottom: 100px;
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         margin: 0;
         padding:30px 0;
     }
@@ -172,7 +172,7 @@
         margin-left: 165px;
     }
     .footer__social-sign {
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             text-align: center;
         }
         color: $secondary-text-color;

@@ -2,7 +2,7 @@
 @import "./_logo";
 
 .header {
-    @media screen and (max-width:$mobile){
+    @media screen and (max-width:767px){
         // position: relative;
         max-width: $mobile;
     }
@@ -12,7 +12,7 @@
     border-bottom: 1px solid #ECECEC;
     .header__container{
         @include flex(space-between, unset, row);
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             display: block;
             margin: 0 auto;
             width: auto;
@@ -26,7 +26,7 @@
     }
     .header__menu-button{
         display: none;
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             display: inline-flex;
         }
         z-index: 2;
@@ -55,7 +55,7 @@
         .header__mobile-menu{
             display: none;
         }
-        @media screen and (max-width:$mobile) {
+        @media screen and (max-width:767px) {
             @include flex(space-between, center , row);
             .header__mobile-menu{
             display: none;

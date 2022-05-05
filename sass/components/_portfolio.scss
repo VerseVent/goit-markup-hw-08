@@ -1,12 +1,12 @@
 .portfolio__filter{
     @include flex(center, unset, row);
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         @include flex(left,unset,row);
         flex-wrap:wrap;
     }
 }
 .portfolio__filter-item{
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         padding-bottom: 15px;
         &:nth-last-of-type(-n + 2){
             padding-bottom: 40px;
@@ -41,7 +41,7 @@
 .portfolio__works {
     @include flex(space-between);
     flex-wrap: wrap;
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         @include flex(center, center, column);
         flex-wrap: nowrap;
     }
@@ -57,7 +57,7 @@
     overflow: hidden;
     max-width: 370px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         max-width: 450px;
         &:not(:last-child){
             margin-bottom: 30px;
@@ -122,7 +122,7 @@
             // text-align: center;
             // padding: 194px 24px 77px 24px;
         }
-        @media screen and (max-width: $mobile) {
+        @media screen and (max-width: 767px) {
             padding: 77px 24px;
         }
         text-align: left;

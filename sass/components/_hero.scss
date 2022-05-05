@@ -17,7 +17,7 @@
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url('../images/hero-bg-desktop/img@2x-min.jpg');
         }
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         // padding: 118px 60px;
         // position: absolute;
         // top: 0;
@@ -58,7 +58,7 @@
     margin: 0 auto;
     text-align: center;
     max-width: 696px;
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         display: block;
         max-width: 450px;
         // @include flex(center,center,column);
@@ -69,7 +69,7 @@
 }
 
 .hero__title {
-    @media screen and (max-width:$mobile) {
+    @media screen and (max-width:767px) {
         font-family: "Roboto";
         font-size: 26px;
         font-weight: 900;

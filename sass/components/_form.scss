@@ -1,6 +1,6 @@
 .form {
     @include flex(unset, unset, column);
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         max-width: 370px;
     }
     .form__list {
@@ -31,7 +31,7 @@
     padding: 0;
     padding-left: 42px;
     margin: 0;
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         width: 100%;
         font-size: calc(.8rem + 1vmax);
     }
@@ -116,7 +116,7 @@
     background-color: $aditional-color;
 }
 .form__policy-sign {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: 767px) {
         font-family: "Roboto";
         font-size: 12px;
         font-weight: 400;
